@@ -70,13 +70,13 @@ class Programing_RGB(object):
             self._device.write8(0x04, 0x02)
         except:
             print ('Set_ChameleonLight_RGB I2C error')
-    #确保颜色值在0-6中
+    #RGB vaule range:0~6
     def Set_BreathSColor_RGB(self, color):
         try:
             self._device.write8(0x05, color)
         except:
             print ('Set_BreathSColor_RGB I2C error')
-    #确保速度设置值在1,2,3中
+    #Speed value：1,2,3
     def Set_BreathSSpeed_RGB(self, speed):
         try:
             self._device.write8(0x06, speed)
